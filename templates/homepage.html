@@ -1,20 +1,31 @@
-<html>
+{% extends 'base.html' %}
+{% block title %}
+    <title> Swap it </title>
+<!--        <link rel="stylesheet" href="./my_css.css">-->
+    <h1> {{brand}} </h1>
+    </head>
+    <h2>
+        These are the products {{product.name}} you can chose from
+    </h2>
+    <ul>
+        <li> Items 2</li>
+        <li> {% if product_name %}
+             {{product_name}}
+             {% else %}
+                Item 3
+             {% endif %}
+        </li>
+        <li> Item 4</li>
+    </ul>
+        <div> This is a div.</div>
 
-</head>
-
-<body>
-<ol>
-    <li> Item 1</li>
-    <li> Item 2</li>
-    <li> Item 3</li>
-</ol>
-<div> This is a div.</div>
-<div>
-    <h2>Header 2 inside a div </h2>
-    <p> Details paragraph. <span>This is inline text </span></p>
-</div>
-
-</body>
+        <div>
+            <h3> Header 2 inside a div </h3>
+            <p> Details paragraph. <span>This is inline text </span></p>
+        </div>
+{% endblock %}
 </html>
+
+
 
 
