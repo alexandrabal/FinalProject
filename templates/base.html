@@ -1,11 +1,18 @@
 <html>
-<head>
     <a href ="/"> Homepage <a/>
     <a href ="/contact"> Contact <a/>
-{% block title %}
-{% endblock %}
-</head>
-
-{% block content %}
-{% endblock %}
+        </head>
+            {% block title %}
+            {% endblock %}
+        <body>
+            <div>
+                {% if request.user.is_authenticated %}
+                    <a href="/users/logout">Logout</a>
+                {% else % }
+                    <a href="/users/login">Login</a>
+                {% endif %}
+            </div>
+        {% block content %}
+        {% endblock %}
+        </body>
 </html>
