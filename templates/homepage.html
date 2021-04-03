@@ -1,28 +1,22 @@
 {% extends 'base.html' %}
 {% block title %}
     <title> Swap it </title>
+{% endblock %}
+
+{% block content %}
 <!--        <link rel="stylesheet" href="./my_css.css">-->
     <h1> {{brand_name}} </h1>
-    </head>
     <h2>
-        These are the products {{product.name}} you can chose from
+        {% if product_name %}
+        {{product_name}}
+        {% else %}
+        Item 3
+        {% endif %}
     </h2>
-    <ul>
-        <li> Items 2</li>
-        <li> {% if product_name %}
-             {{product_name}}
-             {% else %}
-                Item 3
-             {% endif %}
-        </li>
-        <li> Item 4</li>
-    </ul>
-        <div> This is a div.</div>
-
-        <div>
-            <h3> Header 2 inside a div </h3>
-            <p> Details paragraph. <span>This is inline text </span></p>
-        </div>
+    {% if user.is_authenticated %}
+        <h3> Hey, {{user.first_name}} {{user.last_name}}! </h3>
+    {% endif %}
+    <p> We have a total of {{product_list | length}} you can chose from. </p>
 {% endblock %}
 </html>
 
