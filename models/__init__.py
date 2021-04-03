@@ -1,9 +1,4 @@
-from sqlalchemy .ext.declarative import declarative_base
-
-Base = declarative_base
-
-
-import requests
-
-x = requests.get('https://w3schools.com')
-print(x.status_code)
+from models.base import Base, CustomModel
+from models.users import User, Role, Address
+from models. import Ingredient, Pizza, Recipe
+from models.orders import Order, OrderedProducts
