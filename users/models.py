@@ -1,3 +1,4 @@
+"This represents the usermodels, user model default from django and the address model"
 from django.db import models
 from django.contrib.auth import get_user_model
 from utils.constants import BILLING_ADDRESS, SHIPPING_ADDRESS
@@ -18,6 +19,8 @@ class Address(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
 
 
 
