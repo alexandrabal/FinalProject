@@ -5,7 +5,7 @@ from final_project import CustomModel
 AuthUserModel = get_user_model
 
 
-"""These are the store models, product, image, charfield is a textbase databasecolumn"""
+"""These are the product models, image, charfield is a textbase databasecolumn"""
 # Create your models here.
 
 class Product(CustomModel):
