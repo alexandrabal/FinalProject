@@ -17,8 +17,6 @@ class Address(CustomModel):
         BILLING = BILLING_ADDRESS
     type = models.IntegerField(choices=Types.choices, null=False, default=SHIPPING_ADDRESS)
 
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
 
 
