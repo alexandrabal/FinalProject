@@ -6,7 +6,7 @@ from utils.constants import BILLING_ADDRESS, SHIPPING_ADDRESS
 AuthUserModel = get_user_model()
 
 # Create your models here - ORM converting class objects into django columns
-class Address(models.Model):
+class Address(CustomModel):
     user = models.ForeignKey(AuthUserModel, on_delete=models.CASCADE)
     street = models.CharField(max_length=255, null = False)
     city = models.CharField(max_length=255, null=False)
