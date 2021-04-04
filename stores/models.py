@@ -14,7 +14,7 @@ class Product(CustomModel):
     size = models.CharField(choices=ITEM_SIZES,max_length=1)
     color =models.CharField(max_length=255,unique=True)
     price = models.DecimalField(max_digits=5,decimal_places=2,default=0.00)
-    quantity = models.CharField(choices=PRODUCT_QUANTITY ,default=1, null=False)
+    quantity = models.IntegerField()
 
 
 ITEM_SIZES = (
@@ -23,12 +23,10 @@ ITEM_SIZES = (
             ('L','Large'),
             )
 
-PRODUCT_QUANTITY = range(1,30)
-
 class Category(CustomModel):
     name = models.CharField(max_length=255)
 
 class Image(CustomModel):
     product_id = models.ForeignKey(Product,on_delete=CASCADE)
     image = models.ImageField(upload_to='products')
-    url = models.URLField(max_length=600,**options)
+    url = models.URLField(max_length=600)
