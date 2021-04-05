@@ -12,10 +12,12 @@ class Address(CustomModel):
     city = models.CharField(max_length=255, null=False)
     country = models.CharField(max_length=255, null=False)
 
+
     class Types(models.IntegerChoices):
         SHIPPING = SHIPPING_ADDRESS
         BILLING = BILLING_ADDRESS
     type = models.IntegerField(choices=Types.choices, null=False, default=SHIPPING_ADDRESS)
+
 
 
 
