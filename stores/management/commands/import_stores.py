@@ -32,6 +32,6 @@ class Command(BaseCommand):
             raise CommandError('File at %s was not found!' % file_path)
 
         product_list = get_products_list()
-        
 
 
+def create_superuser()
