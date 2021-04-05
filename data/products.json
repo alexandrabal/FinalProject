@@ -1,0 +1,16 @@
+[{
+ 'Name' : "Trousers",
+ 'Description': 'Long Black Trousers',
+ "Size" : 'S',
+ 'Color': 'Yellow',
+ "Price" : 90.00,
+ "Quantity" : 500
+}, {'Name' : "Blouse",
+ 'Description': 'Flower Print Blouse',
+ "Size" : 'M',
+ 'Color': "Green",
+ "Price" : 130.00,
+ "Quantity" : 2000
+}]
+
+
