@@ -40,6 +40,9 @@ class QuestionAnswer(CustomModel):
     name = models.TextField()
     product = models.ForeignKey(Product)
     user = models.ForeignKey(AuthUserModel)
+#     one to many you define the relationship by adding the foreign key to the one model that has more -in this case
+# one product can have more than one question but the question belongs to one product so one to many
+
 
 
 
