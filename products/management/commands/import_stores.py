@@ -2,7 +2,7 @@ import os
 import json
 from django.core.management import BaseCommand, CommandError
 from django.contrib.auth import get_user_model
-# from stores.models import Store
+# from products.models import Store
 
 AuthUserModel = get_user_model()
 
@@ -27,7 +27,7 @@ class Command(BaseCommand):
         file_path = os.path.join('data', file_path)
         try:
             with open(file_path) as import_file:
-                stores = json.load(import_file)
+                products = json.load(import_file)
         except FileNotFoundError as e:
             raise CommandError('File at %s was not found!' % file_path)
 
