@@ -28,5 +28,5 @@ class Category(CustomModel):
 
 class Image(CustomModel):
     product_id = models.ForeignKey(Product,on_delete=CASCADE)
-    image = models.ImageField(upload_to='products')
+    image = models.ImageField(upload_to='product_commands')
     url = models.URLField(max_length=600)
