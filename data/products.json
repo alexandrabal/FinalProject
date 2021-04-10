@@ -4,7 +4,8 @@
  "size": 'S',
  'color': "Navy",
  "price" : 400.00,
- "quantity" : 500
+ "quantity" : 500,
+ "image" : "long"
 },
  {'name' : "Blouse",
  'description': 'Flower Print Blouse',
@@ -55,5 +56,9 @@
  "price" : 130.00,
  "quantity" : 2000
 }]
+
+
+
+
 
 
