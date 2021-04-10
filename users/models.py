@@ -4,7 +4,7 @@ from utils.constants import BILLING_ADDRESS, SHIPPING_ADDRESS
 from final_project.models import CustomModel
 
 AuthUserModel = get_user_model()
-"This represents the usermodels, user model default from django added in a variable"
+'''This represents the usermodels, user model default from django added in a variable'''
 # Create your models here - ORM converting class objects into django columns
 
 class Address(CustomModel):
