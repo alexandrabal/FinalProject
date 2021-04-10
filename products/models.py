@@ -21,7 +21,6 @@ class Product(CustomModel):
     price = models.DecimalField(max_digits=5,decimal_places=2,default=0.00)
     quantity = models.IntegerField()
 
-
 class Category(CustomModel):
     name = models.CharField(max_length=255)
 
@@ -40,7 +39,7 @@ class QuestionAnswer(CustomModel):
     name = models.TextField()
     product = models.ForeignKey(Product)
     user = models.ForeignKey(AuthUserModel)
-#     one to many you define the relationship by adding the foreign key to the one model that has more -in this case
+# one to many you define the relationship by adding the foreign key to the one model that has more -in this case
 # one product can have more than one question but the question belongs to one product so one to many
 
 
