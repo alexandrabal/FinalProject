@@ -1,16 +1,59 @@
 [{
- 'Name' : "Trousers",
- 'Description': 'Long Black Trousers',
- "Size" : 'S',
- 'Color': 'Yellow',
- "Price" : 90.00,
- "Quantity" : 500
-}, {'Name' : "Blouse",
- 'Description': 'Flower Print Blouse',
- "Size" : 'M',
- 'Color': "Green",
- "Price" : 130.00,
- "Quantity" : 2000
+ "name": "Trousers",
+ "description": 'Long Trousers',
+ "size": 'S',
+ 'color': "Navy",
+ "price" : 400.00,
+ "quantity" : 500
+},
+ {'name' : "Blouse",
+ 'description': 'Flower Print Blouse',
+ "size" : 'L',
+ 'color': "Green and Red",
+ "price" : 130.00,
+ "quantity" : 2000
+},
+ {"name": "Trousers",
+ "description": "V-neck T-shirt',
+ "size": 'S',
+ 'color': 'Yellow',
+ "price" : 900.00,
+ "quantity" : 500
+},
+ {'name' : "Jacket",
+ 'description': 'Leather Jacket",
+ "size" : 'M',
+ 'color': "Black",
+ "price" : 130.00,
+ "quantity" : 1000
+},
+ {'name' : "White Poplin Shirt",
+ 'description': 'White Shirt with front buttonse',
+ "size" : 'XS',
+ 'color': "White",
+ "price" : 130.00,
+ "quantity" : 800
+},
+ {'name' : "Pant",
+ 'description': "Linen Pant",
+ "size" : 'XL',
+ 'color': "Nude",
+ "price" : 580.00,
+ "quantity" : 2500
+},
+ {'name' : "Boots",
+ 'description': 'Chunky Boots',
+ "size" : '38',
+ 'color': "Brown",
+ "price" : 900.00,
+ "quantity" : 100
+},
+ {'name' : "Cap",
+ 'description': 'Graphic Print Cap',
+ "size" : 'M',
+ 'color': "Red",
+ "price" : 130.00,
+ "quantity" : 2000
 }]
 
 

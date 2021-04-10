@@ -8,7 +8,7 @@ AuthUserModel = get_user_model()
 
 def get_products_list():
     with open(os.path.join('data', 'products.json')) as products_file:
-        products = json.load(products_file)
+    products = json.load(products_file)
     return products
 
 class Command(BaseCommand):
