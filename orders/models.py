@@ -1,7 +1,7 @@
 '''These are the order models'''
 from django.db import models
 from django.contrib import get_user_model
-from final_project import CustomModel
+from final_project.models import CustomModel
 
 AuthUserModel = get_user_model
 
