@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from utils.constants import BILLING_ADDRESS, SHIPPING_ADDRESS
+from final_project.models import CustomModel
 
 AuthUserModel = get_user_model()
 "This represents the usermodels, user model default from django added in a variable"
@@ -17,7 +18,6 @@ class Address(CustomModel):
         SHIPPING = SHIPPING_ADDRESS
         BILLING = BILLING_ADDRESS
     type = models.IntegerField(choices=Types.choices, null=False, default=SHIPPING_ADDRESS)
-
 
 
 
