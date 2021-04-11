@@ -30,5 +30,3 @@ urlpatterns = [
 # the url pattern must be present here even though in users we're bringing it here because django's way of reading
 # starts with this directory of urls.py
 
-
-
