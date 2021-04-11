@@ -46,10 +46,3 @@ class QuestionAnswer(CustomModel):
     user = models.ForeignKey(AuthUserModel, on_delete=models.CASCADE)
 # one to many you define the relationship by adding the foreign key to the one model that has more -in this case
 # one product can have more than one question but the question belongs to one product so one to many
-
-
-
-
-
-
-

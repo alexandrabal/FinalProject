@@ -22,7 +22,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage_view),
     path('contact/', contact_view),
-    path('users/', include('users.urls'))
-
+    path('users/', include('users.urls')),
+    path('products/', include('products.urls'))
 ]
+
+# this is the route that specify when this url is accessed- where to go to find the file for example
+#     contact view which is gonna be a render of either an html, a redirect.
+# the url pattern must be present here even though in users we're bringing it here because django's way of reading
+# starts with this directory of urls.py
+
+
 
