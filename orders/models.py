@@ -9,7 +9,7 @@ AuthUserModel = get_user_model
 
 class Order(CustomModel):
     billing_address_id = models.ForeignKey(Address, on_delete=models.CASCADE)
-    user = models.OneToManyField('UserOrder')
+    user = models.OneToManyField(AuthUserModel)
     # A user can have more than one order but an order only belongs to one user, each order has one user.
     product =models.ManyToManyField(Product, through='OrderProducts', related_name='product')
 

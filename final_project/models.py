@@ -1,5 +1,5 @@
 from django.db import models
-    class Meta:
+class Meta:
     abstract=True
 
 '''abstract = True property is the reason why this class/model is abstract, not the Meta class'''
