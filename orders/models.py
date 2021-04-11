@@ -1,7 +1,8 @@
 '''These are the order models'''
 from django.db import models
-from django.contrib import get_user_model
+from django.contrib.auth import get_user_model
 from final_project.models import CustomModel
+from users.models import Address
 
 AuthUserModel = get_user_model
 
@@ -9,9 +10,9 @@ AuthUserModel = get_user_model
 
 class Order(CustomModel):
     billing_address_id = models.ForeignKey(Address, on_delete=models.CASCADE)
-    user = models.OneToManyField(AuthUserModel)
+    user = models.ForeignKey('AuthUserModel', on_delete=models.CASCADE)
     # A user can have more than one order but an order only belongs to one user, each order has one user.
-    product =models.ManyToManyField(Product, through='OrderProducts', related_name='product')
+    product = models.ManyToManyField(Product, through='OrderProducts', related_name='product')
 
 
 class OrderProduct(CustomModel):
