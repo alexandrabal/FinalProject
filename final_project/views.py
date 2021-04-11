@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+# render is a function from django.shortcuts that can take many parameters, among request and template_view
 
 def homepage_view(request):
     if request.user.is_authenticated:
@@ -21,6 +21,9 @@ def contact_view(request):
     return render(request, 'contact.html')
 
 
-
 def login_view(request):
     return render(request, 'login.html')
+
+
+def view_all_products(request):
+    return render(request, '')
