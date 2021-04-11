@@ -23,7 +23,6 @@ urlpatterns = [
     path('', homepage_view),
     path('contact/', contact_view),
     path('users/', include('users.urls')),
-    path('products/', include('products.urls'))
 ]
 
 # this is the route that specify when this url is accessed- where to go to find the file for example
