@@ -5,19 +5,18 @@ import os
 import json
 from django.core.management import BaseCommand, CommandError
 from django.contrib.auth import get_user_model
-# from products.models import Product
 
 AuthUserModel = get_user_model()
 
-# class Command(BaseCommand):
-#     def get_products_list():
-#         with open(os.path.join('data', 'products.json')) as products_file:
-#         products = json.load(products_file)
-#         return products
+
+def get_products_list():
+    with open(os.path.join('data', 'products.json')) as products_file:
+        products = json.load(products_file)
+        return products
 
 class Command(BaseCommand):
     def add_arguments(self, parser):
-        parser.add_argument('--file','-f', type=str)
+        parser.add_argument('pe=str)
 
     def handle(self,*args, **options):
         file_path = options.get('file')
@@ -36,7 +35,9 @@ class Command(BaseCommand):
         except FileNotFoundError as e:
             raise CommandError('File at %s was not found!' % file_path)
 
-        product_list = get_products_list()
+products_list = get_products_list()
+
+print("products_list", products_list)
 
 
 # def create_superuser()
