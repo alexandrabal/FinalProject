@@ -12,13 +12,15 @@ ITEM_SIZES = (
             ('S', 'Small'),
             ('M', 'Medium'),
             ('L', 'Large'),
+            ('XS', 'Large'),
+            ('XL', 'Large')
 )
 
 
 class Product(CustomModel):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    size = models.CharField(choices=ITEM_SIZES,max_length=1)
+    size = models.CharField(choices=ITEM_SIZES,max_length=2)
     color = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=5,decimal_places=2,default=0.00)
     quantity = models.IntegerField()
