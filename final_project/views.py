@@ -24,6 +24,3 @@ def contact_view(request):
 def login_view(request):
     return render(request, 'login.html')
 
-
-def view_all_products(request):
-    return render(request, '')

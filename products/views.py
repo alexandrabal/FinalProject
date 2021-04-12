@@ -1,8 +1,8 @@
 from django.shortcuts import render
-
+from django import urls
 
 # Create your views here.
-def view_all_products():
+def view_all_products(request):
     products = []
-    return render(request, 'products.html', {'products': products})
-# why don't we give here the data from the json?
+    return render(request, 'products.html', {
+        'name': name})
