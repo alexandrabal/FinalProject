@@ -17,13 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import homepage_view
 from .views import contact_view
+from products.views import view_all_products
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage_view),
     path('contact/', contact_view),
     path('users/', include('users.urls')),
-    path('products/', view_all_product)
+    # path('products/', view_all_products)
 ]
 
 # this is the route that specify when this url is accessed- where to go to find the file for example

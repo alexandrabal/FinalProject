@@ -5,7 +5,6 @@ def homepage_view(request):
     if request.user.is_authenticated:
         print('user_id', request.user.id)
 
-
     return render(request, 'homepage.html', {
         'brand_name': 'Swap it',
         'motto': 'Swap it',
