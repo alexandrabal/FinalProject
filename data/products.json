@@ -1,4 +1,16 @@
-[{
+[{"name" : "Pant",
+ "description": "Lounge Pant",
+ "size" : "M",
+ "color": "Black",
+ "price" : 80.00,
+ "quantity" : 2500,
+  "image": [
+   "image/Black-Pant.jpeg",
+   "image/Black-Pant2.jpeg",
+   "image/Black-Pant3.jpeg",
+   "image/Black-Pant4.jpeg"
+  ]
+},{
  "name": "Trousers",
  "description": "Long Trousers",
  "size": "S",
@@ -29,18 +41,11 @@
  "quantity" : 1000
 },
  {"name" : "White Poplin Shirt",
- "description": "White Shirt with front buttonse",
+ "description": "White Shirt with front buttons",
  "size" : "XS",
  "color": "White",
  "price" : 130.00,
  "quantity" : 800
-},
- {"name" : "Pant",
- "description": "Linen Pant",
- "size" : "XL",
- "color": "Nude",
- "price" : 580.00,
- "quantity" : 2500
 },
  {"name" : "Boots",
  "description": "Chunky Boots",
