@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from products.models import Product
 
 # render is a function from django.shortcuts that can take many parameters, among request and template_view
 
@@ -15,11 +16,6 @@ def homepage_view(request):
             'size': 'S'
             }]
             })
-
-def view_all_products(request):
-    products = []
-    return render(request, 'products.html', {
-        'name': name})
 
 def contact_view(request):
     return render(request, 'contact.html')

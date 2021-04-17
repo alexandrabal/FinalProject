@@ -34,12 +34,12 @@ class Command(BaseCommand):
             raise CommandError('Import supports .json files only!')
         # if the file you try to import is not json this error is raised use ./manage.py import_products -f abc to test
 
-        # file_path = os.path.join('data', file_path)
-        # try:
-        #     with open(file_path) as import_file:
-        #         products = json.load(import_file)
-        # except FileNotFoundError as e:
-        #     raise CommandError('File at %s was not found!' % file_path)
+        file_path = os.path.join('data', file_path)
+        try:
+            with open(file_path) as import_file:
+                products = json.load(import_file)
+        except FileNotFoundError as e:
+            raise CommandError('File at %s was not found!' % file_path)
 
         products_list = get_products_list()
 
@@ -56,13 +56,11 @@ class Command(BaseCommand):
                 size = product["size"],
                 color = product["color"],
                 price = product["price"],
-                quantity = product ["quantity"]
+                quantity = product ["quantity"],
+                image = product ["image"]
             )
             # print (db_product.name)
             db_product.save()
-
-        for image in product ['image']:
-                db_image =
 
 
 # def create_superuser()

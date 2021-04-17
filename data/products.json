@@ -4,66 +4,66 @@
  "color": "Black",
  "price" : 80.00,
  "quantity" : 2500,
-  "image": [
+ "image": [
    "image/Black-Pant.jpeg",
    "image/Black-Pant2.jpeg",
    "image/Black-Pant3.jpeg",
    "image/Black-Pant4.jpeg"
-  ]
-},{
+  ]},{
  "name": "Trousers",
  "description": "Long Trousers",
  "size": "S",
  "color": "Navy",
  "price" : 400.00,
  "quantity" : 500,
- "image" : "long"
+ "image": "image/Black-Pant4.jpeg"
 },
  {"name" : "Blouse",
  "description": "Flower Print Blouse",
  "size" : "L",
  "color": "Green and Red",
  "price" : 130.00,
- "quantity" : 2000
+ "quantity" : 2000,
+  "image": "image/Black-Pant4.jpeg"
 },
  {"name": "Trousers",
  "description": "V-neck T-shirt",
  "size": "S",
  "color": "Yellow",
  "price" : 900.00,
- "quantity" : 500
+ "quantity" : 500,
+  "image": "image/Black-Pant4.jpeg"
 },
  {"name" : "Jacket",
  "description": "Leather Jacket",
  "size" : "M",
  "color": "Black",
  "price" : 130.00,
- "quantity" : 1000
+ "quantity" : 1000,
+  "image": "image/Black-Pant4.jpeg"
 },
  {"name" : "White Poplin Shirt",
  "description": "White Shirt with front buttons",
  "size" : "XS",
  "color": "White",
  "price" : 130.00,
- "quantity" : 800
+ "quantity" : 800,
+  "image": "image/Black-Pant4.jpeg"
 },
  {"name" : "Boots",
  "description": "Chunky Boots",
  "size" : "38",
  "color": "Brown",
  "price" : 900.00,
- "quantity" : 100
+ "quantity" : 100,
+  "image": "image/Black-Pant4.jpeg"
 },
  {"name" : "Cap",
  "description": "Graphic Print Cap",
  "size" : "M",
  "color": "Red",
  "price" : 130.00,
- "quantity" : 2000
+ "quantity" : 2000,
+  "image": "image/Black-Pant4.jpeg"
 }]
-
-
-
-
-
 
