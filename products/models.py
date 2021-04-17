@@ -33,7 +33,7 @@ class Category(CustomModel):
 class Image(CustomModel):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     # for all foreign keys you don't need to name them with  _id
-    image = models.ImageField(upload_to='product_commands')
+    image = models.ImageField(upload_to='image')
 
 
 class Review(CustomModel):
@@ -46,5 +46,6 @@ class QuestionAnswer(CustomModel):
     name = models.TextField()
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(AuthUserModel, on_delete=models.CASCADE)
+
 # one to many you define the relationship by adding the foreign key to the one model that has more -in this case
 # one product can have more than one question but the question belongs to one product so one to many

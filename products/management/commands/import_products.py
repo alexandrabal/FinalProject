@@ -1,24 +1,30 @@
-'''this is a custom command that can be calleed by using ./manage.py import_products
-the aim of this command is to import a json file in the database'''
+
+
+
+# '''this is a custom command that can be called by using ./manage.py import_products
+# the aim of this command is to import a json file in the database
 
 import os
 import json
 from django.core.management import BaseCommand, CommandError
 from django.contrib.auth import get_user_model
-from products.models import Product
+from products.models import Product, Category, Image, Review, QuestionAnswer
 
 AuthUserModel = get_user_model()
 
+# join data and products with a function
 def get_products_list():
     with open(os.path.join('data', 'products.json')) as products_file:
         products = json.load(products_file)
-        return products
+    return products
 
+
+# define the custom command that parses and adds the
 class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('--file', '-f', type=str)
 
-    def handle(self,*args, **options):
+    def handle(self, *args, **options):
         file_path = options.get('file')
 
         if not file_path:
@@ -41,6 +47,8 @@ class Command(BaseCommand):
 
         for product in products_list:
             # print (product["name"])
+            # parsing through the json file to be able to make a class instance of product which is translated into a
+            # the html view
 
             db_product = Product(
                 name = product["name"],
@@ -52,6 +60,9 @@ class Command(BaseCommand):
             )
             # print (db_product.name)
             db_product.save()
+
+        for image in product ['image']:
+                db_image =
 
 
 # def create_superuser()
