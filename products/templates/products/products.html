@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block title %}
     <title> Products </title>
 {% endblock %}
 {% block content %}
+<!--<img src="/media/image/Black-Pant.jpeg" />-->
 <ul>
 <!--    The below will iterate over a list of products    -->
         {% for product in products %}
@@ -19,10 +22,11 @@
                 {{product.quantity}}
                 </br>
                 {% for image in products.images %}
-                <a href="" />
-                <img src="{{image }} " width="100" />
+                        {{image}}
+                        <img src="/media/images/{{image }} " width="60" />
+                {% endfor %}
         </li>
-        {% endfor %}
+
         {% endfor %}
 
 {% endblock %}
