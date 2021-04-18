@@ -5,15 +5,11 @@
             <a href ="/"> Homepage <a/>
             <a href ="/products"> Products <a/>
             <a href ="/contact"> Contact <a/>
-        </head>
-        <body>
-            <div>
                  {% if request.user.is_authenticated %}
                     <a href="/users/logout">Logout</a>
                 {% else %}
                     <a href="/users/login">Login</a>
                 {% endif %}
-            </div>
         {% block content %}
         {% endblock %}
         </body>

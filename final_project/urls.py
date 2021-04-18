@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import homepage_view
 from .views import contact_view
+from django.conf import settings
+
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
@@ -25,7 +29,8 @@ urlpatterns = [
     path('contact/', contact_view),
     path('users/', include('users.urls')),
     path('products/', include('products.urls'))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 # this is the route that specify when this url is accessed- where to go to find the file for example
 #     contact view which is gonna be a render of either an html, a redirect.

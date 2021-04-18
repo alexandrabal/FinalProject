@@ -1,7 +1,8 @@
-
-{%extends 'base.html' %}
+{% extends 'base.html' %}
 {% block title %}
-   <title> Contact Page </title>
+    <title> Products </title>
+{% endblock %}
+{% block content %}
 <ul>
 <!--    The below will iterate over a list of products    -->
         {% for product in products %}
@@ -9,14 +10,21 @@
                 <br>
                 {{product.description}}
                 </br>
-                {{product.image}}
+                {{product.size}}
                 </br>
-                {{product.image}}
+                {{product.color}}
                 </br>
-                {{product.image}}
+                {{product.price}}
                 </br>
+                {{product.quantity}}
+                </br>
+                {% for image in products.images %}
+                <a href="" />
+                <img src="{{image }} " width="100" />
         </li>
         {% endfor %}
-</ul>
+        {% endfor %}
+
 {% endblock %}
+</ul>
 
