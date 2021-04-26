@@ -57,10 +57,19 @@ class Command(BaseCommand):
                 color = product["color"],
                 price = product["price"],
                 quantity = product ["quantity"],
-                image = product ["image"]
             )
-            # print (db_product.name)
+            print (db_product.name)
             db_product.save()
+
+            # parse through the images using the dictionary key image, it's a class instance Image
+            # save it in the data base
+            for image in product["image"]:
+                db_image = Image(
+                image = image,
+                    product = db_product
+                    )
+                # print (db_image.image)
+            db_image.save()
 
 
 # def create_superuser()

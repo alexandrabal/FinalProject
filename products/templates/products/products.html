@@ -21,9 +21,8 @@
                 </br>
                 {{product.quantity}}
                 </br>
-                {% for image in products.images %}
-                        {{image}}
-                        <img src="/media/images/{{image }} " width="60" />
+                {% for image in product.image_set.all %}
+                        <img src="/media/image/{{image.image}} " width="120" />
                 {% endfor %}
         </li>
 
@@ -31,4 +30,3 @@
 
 {% endblock %}
 </ul>
-

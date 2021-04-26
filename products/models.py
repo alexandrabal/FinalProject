@@ -25,7 +25,6 @@ class Product(CustomModel):
     price = models.DecimalField(max_digits=5,decimal_places=2,default=0.00)
     quantity = models.IntegerField()
 
-
 class Category(CustomModel):
     name = models.CharField(max_length=255)
 
