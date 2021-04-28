@@ -33,7 +33,6 @@ class Command(BaseCommand):
         if not file_path.endswith('.json'):
             raise CommandError('Import supports .json files only!')
         # if the file you try to import is not json this error is raised use ./manage.py import_products -f abc to test
-
         file_path = os.path.join('data', file_path)
         try:
             with open(file_path) as import_file:
@@ -43,14 +42,13 @@ class Command(BaseCommand):
 
         products_list = get_products_list()
 
-        print("products_list", products_list)
-
+        # print("products_list", products_list)
+        # for each product in the json file- save it in the database
         for product in products_list:
             # print (product["name"])
             # parsing through the json file to be able to make a class instance of product which is translated into a
             # the html view
-
-            db_product = Product(
+            db_product= Product(
                 name = product["name"],
                 description = product["description"],
                 size = product["size"],
@@ -58,18 +56,16 @@ class Command(BaseCommand):
                 price = product["price"],
                 quantity = product ["quantity"],
             )
-            print (db_product.name)
-            db_product.save()
 
+            db_product.save()
             # parse through the images using the dictionary key image, it's a class instance Image
             # save it in the data base
             for image in product["image"]:
+            # db_ingredient = Ingredient.objects.filter(name=ingredient['name']).first()
                 db_image = Image(
                 image = image,
-                    product = db_product
-                    )
-                # print (db_image.image)
+                product = db_product
+                )
             db_image.save()
-
 
 # def create_superuser()
