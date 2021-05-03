@@ -1,16 +1,45 @@
+{% load static %}
 <html>
-        <head>
-            {% block title %}
-            {% endblock %}
-            <a href ="/"> Homepage <a/>
-            <a href ="/products"> Products <a/>
-            <a href ="/contact"> Contact <a/>
-                 {% if request.user.is_authenticated %}
-                    <a href="/users/logout">Logout</a>
-                {% else %}
-                    <a href="/users/login">Login</a>
-                {% endif %}
-        {% block content %}
+    <head>
+        <title>Alex's fashion store</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+        <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+        {% block style %}
         {% endblock %}
-        </body>
+        <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+    </head>
+    <body>
+    <div class="page-wrapper">
+            <div class="header-wrapper">
+                <div class="header-content">
+                    <div class="brand">
+                        <a href="/">
+                            <img src="{% static 'images/deliveryLogo.png' %}" height="50" />
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                    <div class="user-data">
+                        {% if request.user.is_authenticated %}
+                            <a href="/users/logout">Logout</a>
+                        {% else %}
+                            <a href="/users/login">Login</a>
+                            <a id="register-link" href="/users/register">Register</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="header-image" style="background-image: url('{% static 'images/appBanner.jpg' %}')">
+                </div>
+            </div>
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        {% block script %}
+        {% endblock %}
+    </body>
 </html>

@@ -40,6 +40,9 @@ class Command(BaseCommand):
         except FileNotFoundError as e:
             raise CommandError('File at %s was not found!' % file_path)
 
+        Image.objects.all().delete()
+        Product.objects.all().delete()
+
         products_list = get_products_list()
 
         # print("products_list", products_list)
@@ -66,6 +69,6 @@ class Command(BaseCommand):
                 image = image,
                 product = db_product
                 )
-            db_image.save()
+                db_image.save()
 
 # def create_superuser()

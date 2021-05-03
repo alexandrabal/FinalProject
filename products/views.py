@@ -10,3 +10,5 @@ def view_all_products(request):
         "products": products
     #variable from the html template for product in products
     })
+
+
