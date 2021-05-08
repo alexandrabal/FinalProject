@@ -8,16 +8,20 @@
 <!--        <link rel="stylesheet" href="./my_css.css">-->
     <h1> {{brand_name}} </h1>
     <h2>
-        {% if product_name %}
+        <p> We have a total of {{all_products}} you can choose from. </p> </h2>
+    <h3>
+<!--        product list is from views it's a variable that you give to render based on this html. file, in this logic-->
+<!--        product is the product object that you called with the product class function all, or .count-->
+        {% for product in product_list %}
+        <li> {{product.name}}
+            <br> {{product.description}}
+            {{product.size}}
         {{product_name}}
-        {% else %}
-        Item 3
-        {% endif %}
-    </h2>
+        {% endfor %}
+    </h3>
     {% if user.is_authenticated %}
-        <h3> Hey, {{user.first_name}} {{user.last_name}}! </h3>
+    <h4> Hey, {{user.first_name}} {{user.last_name}}! </h4>
     {% endif %}
-    <p> We have a total of {{product_list | length}} you can chose from. </p>
 {% endblock %}
 </html>
 

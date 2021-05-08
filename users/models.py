@@ -6,7 +6,6 @@ from final_project.models import CustomModel
 AuthUserModel = get_user_model()
 '''This represents the user models, user model default from django added in a variable'''
 
-
 # Create your models here - ORM converting class objects into django columns
 
 class Address(CustomModel):

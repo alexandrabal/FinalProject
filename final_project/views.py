@@ -6,15 +6,20 @@ from products.models import Product
 def homepage_view(request):
     if request.user.is_authenticated:
         print('user_id', request.user.id)
+    products = Product.objects.all()[:5]
+    # querying the database
 
     return render(request, 'homepage.html', {
         'brand_name': 'Swap it',
         'motto': 'Swap it',
-        'product_list': [{
-            'product_name': 'Long trousers',
-            'price': 12,
-            'size': 'S'
-            }]
+        'product_list': products,
+        "all_products": Product.objects.count()
+
+        # 'size': products
+            # 'product_name': 'Long trousers',
+            # 'price': 12,
+            # 'size': 'S'
+            # }]
             })
 
 def contact_view(request):
