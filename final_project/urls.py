@@ -19,7 +19,7 @@ from .views import homepage_view
 from .views import contact_view
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -1,27 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    <title> Swap it </title>
+    <title> Alex's fashion store </title>
 {% endblock %}
 
 {% block content %}
 <!--        <link rel="stylesheet" href="./my_css.css">-->
-    <h1> {{brand_name}} </h1>
+    <h1>{{brand_name}} {{"-"}} {{motto}}</h1>
     <h2>
-        <p> We have a total of {{all_products}} you can choose from. </p> </h2>
-    <h3>
+        {% if user.is_authenticated %}
+        Hey, {{user.first_name}} {{user.last_name}}!
+        {% endif %}
+    <p> We have a total of {{all_products}} items you can choose from. </p>
+<!--        ideally here to add categories-->
 <!--        product list is from views it's a variable that you give to render based on this html. file, in this logic-->
 <!--        product is the product object that you called with the product class function all, or .count-->
-        {% for product in product_list %}
-        <li> {{product.name}}
-            <br> {{product.description}}
-            {{product.size}}
-        {{product_name}}
-        {% endfor %}
-    </h3>
-    {% if user.is_authenticated %}
-    <h4> Hey, {{user.first_name}} {{user.last_name}}! </h4>
-    {% endif %}
+    <h4>
+    <ul>
+    {% for product in product_list %}
+     {{product.name}}
+    <br> {{product.description}} {{product.size}} </br>
+    <br>
+
+    {% endfor %}
+    </ul>
+    </h4>
 {% endblock %}
 </html>
 

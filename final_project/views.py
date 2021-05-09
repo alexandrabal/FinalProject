@@ -10,8 +10,8 @@ def homepage_view(request):
     # querying the database
 
     return render(request, 'homepage.html', {
-        'brand_name': 'Swap it',
-        'motto': 'Swap it',
+        'brand_name': 'ESSE',
+        'motto': 'Sustainable essentials',
         'product_list': products,
         "all_products": Product.objects.count()
 
