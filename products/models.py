@@ -43,8 +43,11 @@ class Review(CustomModel):
 
 class QuestionAnswer(CustomModel):
     name = models.TextField()
+    description = models.TextField(default='')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(AuthUserModel, on_delete=models.CASCADE)
+
+#     the answer is modified internally in djangoadmin.
 
 # one to many you define the relationship by adding the foreign key to the one model that has more -in this case
 # one product can have more than one question but the question belongs to one product so one to many
