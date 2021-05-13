@@ -1,0 +1,15 @@
+DJANGO
+in pagina de admin - trebuie ceva funcitonalitatE!!!!
+
+Sa te register printrun form
+
+Register function la user
+sa ai profil cu imagine la userul logat
+reviews
+questions and answer
+sa te inregistrezi cu user
+
+se te inregistrezi cu social media
+nu merge la authentificare cu cu facebook daca rulezi cu 127
+Trebuie sa te autentifici cu local host.
+

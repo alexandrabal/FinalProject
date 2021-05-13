@@ -19,7 +19,7 @@ def get_products_list():
     return products
 
 
-# define the custom command that parses and adds the
+# define the custom command that parses and adds the file
 class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('--file', '-f', type=str)
