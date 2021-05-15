@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from products.models import Product
-from users.views import register_view
-
 # render is a function from django.shortcuts that can take many parameters, among request and template_view
 
 def homepage_view(request):
@@ -29,4 +27,3 @@ def contact_view(request):
 
 def login_view(request):
     return render(request, 'login.html')
-
