@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-›
+
 INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'users.apps.UsersConfig',
@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': config('DB_HOST', 'localhost'),
         'PORT': config('DB_PORT', 3306),
-        'NAME': config('DB_NAME', 'final_project'),
+        'NAME': config('DB_NAME', 'finalproject'),
         'USER': config('DB_USER', 'root'),
         'PASSWORD': config('DB_PASS'),
     }
@@ -137,3 +137,5 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
