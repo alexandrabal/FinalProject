@@ -25,8 +25,10 @@ class Product(CustomModel):
     price = models.DecimalField(max_digits=5,decimal_places=2,default=0.00)
     quantity = models.IntegerField()
 
+
 class Category(CustomModel):
     name = models.CharField(max_length=255)
+#     make a many to ayn relationship
 
 
 class Image(CustomModel):
@@ -48,7 +50,7 @@ class QuestionAnswer(CustomModel):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(AuthUserModel, on_delete=models.CASCADE)
     answer = models.TextField(default='')
-#     the answer is modified internally in djangoadmin.
+#     the answer is modified internally in djangoadmin
 
 # one to many you define the relationship by adding the foreign key to the one model that has more -in this case
 # one product can have more than one question but the question belongs to one product so one to many

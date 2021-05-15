@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&34dk)3m-$3yh@@@1sb03yc!c*e1l1d!_#$@qye)c^$c$2m86@'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,7 +31,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+›
 INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'users.apps.UsersConfig',
@@ -81,13 +83,13 @@ WSGI_APPLICATION = 'final_project.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'PORT':3306,
-        'NAME': 'finalproject',
-        'USER':'root',
-        'PASSWORD':'root'
+        'HOST': config('DB_HOST', 'localhost'),
+        'PORT': config('DB_PORT', 3306),
+        'NAME': config('DB_NAME', 'final_project'),
+        'USER': config('DB_USER', 'root'),
+        'PASSWORD': config('DB_PASS'),
     }
 }
 

@@ -25,4 +25,3 @@ class OrderProduct(CustomModel):
     # this table will include: id, order_id, stock, created_at, updated_at
 
 
-

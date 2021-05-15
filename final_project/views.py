@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from products.models import Product
+from users.views import register_view
 
 # render is a function from django.shortcuts that can take many parameters, among request and template_view
 
