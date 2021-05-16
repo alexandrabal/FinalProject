@@ -24,6 +24,5 @@ def homepage_view(request):
 def contact_view(request):
     return render(request, 'contact.html')
 
-
 def login_view(request):
-    return render(request, 'login.html')
+    return render(request, 'users/login.html')
