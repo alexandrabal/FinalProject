@@ -14,7 +14,7 @@ class RegisterForm(forms.Form):
             AuthUser.object.get(email=email)
             except
         AuthUser.DoesNotExist:
-            
+
         if user:
             raise forms.ValidationError("Email is already taken")
         return email
